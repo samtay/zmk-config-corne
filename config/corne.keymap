@@ -69,18 +69,46 @@
                 <&kp LCTRL>;
         };
 
-        adob: adob {
+        browsertab_prev: browsertab_prev {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LS(RIGHT_ALT)>,
+                <&kp LCTRL &kp LSHFT>,
                 <&macro_tap>,
-                <&kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_2>,
+                <&kp TAB>,
                 <&macro_release>,
-                <&kp RIGHT_ALT>;
+                <&kp LCTRL &kp LSHFT>;
 
-            label = "ADOB";
+            label = "BROWSERTAB_PREV";
+        };
+
+        zoom_in: zoom_in {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp PLUS>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "ZOOM_IN";
+        };
+
+        zoom_out: zoom_out {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp MINUS>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "ZOOM_OUT";
         };
     };
 
@@ -198,10 +226,37 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U      &kp I          &kp O    &kp P     &kp BACKSPACE
-&kp LSHFT  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                         &kp LGUI  &mo 1  &kp SPACE    &kp RET  &lt 2 TAB  &kp LEFT_ALT
+&kp TAB     &kp Q    &kp W  &kp E      &kp R         &kp T             &kp Y         &kp U     &kp I      &kp O    &kp P            &kp BACKSPACE
+&kp ESCAPE  &lt 4 A  &kp S  &lt 3 D    &lt 1 F       &kp G             &kp H         &lt 1 J   &lt 3 K    &kp L    &lt 4 SEMICOLON  &kp SQT
+&kp LSHFT   &kp Z    &kp X  &kp C      &kp V         &kp B             &kp N         &kp M     &kp COMMA  &kp DOT  &kp FSLH         &kp RSHFT
+                            &kp LCTRL  &kp LEFT_ALT  &mt LGUI SPACE    &mt RGUI RET  &kp RALT  &kp RCTRL
+            >;
+        };
+
+        SYM-1 {
+            display-name = "Symbols";
+
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            bindings = <
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RPAR       &trans
+&trans  &trans    &trans  &trans    &trans    &kp GRAVE    &kp MINUS  &kp LBKT  &kp RBKT   &kp EQUAL             &kp PIPE       &trans
+&trans  &trans    &trans  &trans    &trans    &kp TILDE    &kp UNDER  &kp LBRC  &kp RBRC   &kp PLUS              &kp BACKSLASH  &trans
+                          &trans    &trans    &trans       &trans     &trans    &trans
+            >;
+        };
+
+        SYM-2 {
+            display-name = "Symbols";
+            bindings = <
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RPAR       &trans
+&trans  &trans    &trans  &trans    &trans    &kp GRAVE    &kp MINUS  &kp LBKT  &kp RBKT   &kp EQUAL             &kp PIPE       &trans
+&trans  &trans    &trans  &trans    &trans    &kp TILDE    &kp UNDER  &kp LBRC  &kp RBRC   &kp PLUS              &kp BACKSLASH  &trans
+                          &trans    &trans    &trans       &trans     &trans    &trans
             >;
         };
 
@@ -215,50 +270,25 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &kp N1  &kp N2    &kp N3       &kp N4           &kp N5           &kp N6   &kp N7        &kp N8        &kp N9        &kp N0  &trans
-&caps_word  &trans  &trans    &kp UP_ARROW  &browsertab      &kp PAGE_UP      &kp N0   &kp N4  &kp N5        &kp N6  &trans  &trans
-&trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &trans   &kp N1  &kp N2  &kp N3  &trans  &trans
-                          &kp LGUI      &trans           &kp SPACE        &kp RET  &trans        &trans
-            >;
-        };
-
-        SYM {
-            display-name = "Symbols";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&trans  &kp EXCL  &kp AT          &kp HASH        &kp DLLR         &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RPAR  &trans
-&trans  &trans    &trans          &kp UP_ARROW    &trans           &kp GRAVE    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT              &kp BSLH  &trans
-&trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TILDE    &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC              &kp PIPE  &trans
-                                  &kp LGUI        &trans           &kp SPACE    &kp RET    &trans     &trans
+&trans      &kp N1  &kp N2            &kp N3        &kp N4           &kp N5           &kp N6     &kp N7  &kp N8  &kp N9  &kp N0  &trans
+&caps_word  &trans  &browsertab_prev  &kp UP_ARROW  &browsertab      &kp PAGE_UP      &zoom_in   &kp N4  &kp N5  &kp N6  &trans  &trans
+&trans      &trans  &kp LEFT          &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &zoom_out  &kp N1  &kp N2  &kp N3  &trans  &trans
+                                      &trans        &trans           &trans           &trans     &trans  &trans
             >;
         };
 
         ADJ {
             display-name = "System";
             bindings = <
-&trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10      &trans
-&trans  &kp F11       &kp F12       &trans        &trans      &studio_unlock            &trans  &trans  &trans  &trans  &trans       &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &trans  &trans  &trans  &trans  &bootloader  &trans
-                                    &trans        &trans      &trans            &trans  &trans  &trans
+&trans  &kp F1        &kp F2        &kp F3        &kp F4      &kp F5            &kp F6      &kp F7                &kp F8                &kp F9  &kp F10      &trans
+&trans  &kp F11       &kp F12       &trans        &trans      &studio_unlock    &kp K_MUTE  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &trans  &trans       &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &trans      &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans  &bootloader  &trans
+                                    &trans        &trans      &trans            &trans      &trans                &trans
             >;
         };
-        extra1 {
-            status = "reserved";
-        };
+
+        extra1 { status = "reserved"; };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        l3 {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
