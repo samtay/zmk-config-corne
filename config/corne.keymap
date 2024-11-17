@@ -134,7 +134,7 @@
         };
 
         rparen {
-            bindings = <&none>;
+            bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <21 22>;
         };
 
