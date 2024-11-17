@@ -17,7 +17,7 @@
             tapping-term-ms = <200>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+            bindings = <&mo>, <&kp>;
 
             quick-tap-ms = <180>;
             global-quick-tap;
@@ -226,10 +226,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB     &kp Q    &kp W  &kp E      &kp R         &kp T             &kp Y         &kp U     &kp I      &kp O    &kp P            &kp BACKSPACE
-&kp ESCAPE  &lt 3 A  &kp S  &lt 2 D    &lt 1 F       &kp G             &kp H         &lt 1 J   &lt 2 K    &kp L    &lt 3 SEMICOLON  &kp SQT
-&kp LSHFT   &kp Z    &kp X  &kp C      &kp V         &kp B             &kp N         &kp M     &kp COMMA  &kp DOT  &kp FSLH         &kp RSHFT
-                            &kp LCTRL  &kp LEFT_ALT  &mt LGUI SPACE    &mt RGUI RET  &kp RALT  &kp RCTRL
+&kp TAB     &kp Q    &kp W  &kp E      &kp R               &kp T       &kp Y     &kp U         &kp I      &kp O    &kp P            &kp BACKSPACE
+&kp ESCAPE  &hm 3 A  &kp S  &hm 2 D    &hm 1 F             &kp G       &kp H     &hm 1 J       &hm 2 K    &kp L    &hm 3 SEMICOLON  &kp SQT
+&kp LSHFT   &kp Z    &kp X  &kp C      &kp V               &kp B       &kp N     &kp M         &kp COMMA  &kp DOT  &kp FSLH         &kp RSHFT
+                            &kp LCTRL  &mt LEFT_ALT SPACE  &kp LGUI    &kp RGUI  &mt RALT RET  &kp RCTRL
             >;
         };
 
