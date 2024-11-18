@@ -211,7 +211,7 @@
 &trans      &kp N1  &kp N2           &kp N3        &kp N4           &kp N5           &kp N6         &kp N7  &kp N8  &kp N9  &kp N0  &trans
 &caps_word  &trans  &kp LC(LS(TAB))  &kp UP_ARROW  &kp LC(TAB)      &kp PAGE_UP      &kp LG(PLUS)   &kp N4  &kp N5  &kp N6  &trans  &trans
 &trans      &trans  &kp LEFT         &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &kp LG(MINUS)  &kp N1  &kp N2  &kp N3  &trans  &trans
-                                     &trans        &trans           &trans           &trans         &trans  &trans
+                                     &trans        &trans           &trans           &trans         &trans  &kp N0
             >;
         };
 
