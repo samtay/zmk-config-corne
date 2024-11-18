@@ -62,7 +62,7 @@
             tapping-term-ms = <200>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&mt>, <&kp>;
+            bindings = <&kp>, <&kp>;
 
             quick-tap-ms = <180>;
             global-quick-tap;
