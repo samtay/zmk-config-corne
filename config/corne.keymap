@@ -191,10 +191,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp ASTRK       &kp LEFT_PARENTHESIS  &kp RPAR       &trans
-&trans  &kp TILDE  &kp GRAVE  &trans    &kp LBKT  &trans       &trans     &kp RBKT  &kp MINUS       &kp EQUAL             &kp PIPE       &trans
-&trans  &trans     &trans     &trans    &kp LBRC  &trans       &trans     &kp RBRC  &kp UNDERSCORE  &kp PLUS              &kp BACKSLASH  &trans
-                              &trans    &trans    &trans       &trans     &trans    &trans
+&trans  &kp EXCL   &kp AT     &kp HASH        &kp DLLR  &kp PRCNT    &kp ASTRK  &kp PLUS  &kp EQUAL  &kp LEFT_PARENTHESIS  &kp RPAR       &kp DELETE
+&trans  &kp TILDE  &kp GRAVE  &kp UNDERSCORE  &kp PIPE  &kp AMPS     &kp CARET  &kp LT    &kp MINUS  &kp GT                &kp DOLLAR     &trans
+&trans  &trans     &trans     &trans          &trans    &trans       &kp LBKT   &kp RBKT  &kp LBRC   &kp RBRC              &kp BACKSLASH  &trans
+                              &trans          &trans    &trans       &trans     &trans    &trans
             >;
         };
 
@@ -208,10 +208,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp LG(GRAVE)  &kp N1  &kp N2           &kp N3        &kp N4           &kp N5           &kp N6         &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&caps_word     &trans  &kp LC(LS(TAB))  &kp UP_ARROW  &kp LC(TAB)      &kp PAGE_UP      &kp LG(PLUS)   &kp N4  &kp N5  &kp N6  &trans  &trans
-&trans         &trans  &kp LEFT         &kp DOWN      &kp RIGHT_ARROW  &kp PAGE_DOWN    &kp LG(MINUS)  &kp N1  &kp N2  &kp N3  &trans  &trans
-                                        &trans        &trans           &trans           &trans         &trans  &kp N0
+&kp LG(GRAVE)  &kp N1  &kp N2           &kp N3        &kp N4           &kp N5               &kp N6         &kp N7  &kp N8  &kp N9  &kp N0  &trans
+&caps_word     &trans  &kp LC(LS(TAB))  &kp UP_ARROW  &kp LC(TAB)      &kp K_SCROLL_UP      &kp LG(PLUS)   &kp N4  &kp N5  &kp N6  &trans  &trans
+&trans         &trans  &kp LEFT         &kp DOWN      &kp RIGHT_ARROW  &kp K_SCROLL_DOWN    &kp LG(MINUS)  &kp N1  &kp N2  &kp N3  &trans  &trans
+                                        &trans        &trans           &trans               &trans         &trans  &kp N0
             >;
         };
 
