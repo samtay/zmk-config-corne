@@ -131,31 +131,43 @@
         lparen {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <3 4>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <20>;
         };
 
         rparen {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <7 8>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <20>;
         };
 
         lbrkt {
             bindings = <&kp LBKT>;
             key-positions = <15 16>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <20>;
         };
 
         rbrkt {
             bindings = <&kp RBKT>;
             key-positions = <20 19>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <20>;
         };
 
         lbrc {
             bindings = <&kp LBRC>;
             key-positions = <27 28>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <20>;
         };
 
         rbrc {
             bindings = <&kp RBRC>;
             key-positions = <31 32>;
+            timeout-ms = <20>;
+            require-prior-idle-ms = <20>;
         };
     };
 
