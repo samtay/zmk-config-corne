@@ -186,10 +186,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp TAB       &hmm LEFT_ALT Q  &kp W            &kp E  &kp R      &kp T       &kp Y     &kp U    &kp I      &kp O                 &hmm RIGHT_ALT P   &kp BACKSPACE
-&lt 1 ESCAPE  &kp A            &hmm LCTRL S     &kp D  &kp F      &kp G       &kp H     &kp J    &kp K      &hmm RCTRL L          &kp SEMI           &lt 1 SQT
-&kp LSHFT     &mt LS(LALT) Z   &mt LS(LCTRL) X  &kp C  &hm 2 V    &kp B       &kp N     &hm 2 M  &kp COMMA  &mt RS(RCTRL) PERIOD  &mt RS(RALT) FSLH  &kp RSHFT
-                                                &mo 4  &kp SPACE  &kp LGUI    &kp RGUI  &kp RET  &mo 3
+&kp TAB       &hmm LEFT_ALT Q  &kp W             &kp E  &kp R      &kp T       &kp Y     &kp U    &kp I      &kp O                  &hmm RIGHT_ALT P    &kp BACKSPACE
+&lt 1 ESCAPE  &kp A            &hmm LCTRL S      &kp D  &kp F      &kp G       &kp H     &kp J    &kp K      &hmm RCTRL L           &kp SEMI            &lt 1 SQT
+&kp LSHFT     &hmm LS(LALT) Z  &hmm LS(LCTRL) X  &kp C  &hm 2 V    &kp B       &kp N     &hm 2 M  &kp COMMA  &hmm RS(RCTRL) PERIOD  &hmm RS(RALT) FSLH  &kp RSHFT
+                                                 &mo 4  &kp SPACE  &kp LGUI    &kp RGUI  &kp RET  &mo 3
             >;
         };
 
@@ -230,10 +230,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&kp LG(GRAVE)  &trans         &kp LS(LC(TAB))  &kp UP_ARROW                       &kp LC(TAB)          &trans               &trans  &trans              &kp LG(UP_ARROW)    &trans         &trans  &trans
-&trans         &kp PG_UP      &kp LEFT_ARROW   &kp DOWN_ARROW                     &kp RIGHT_ARROW      &kp K_SCROLL_UP      &trans  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT)  &trans  &trans
-&trans         &kp PAGE_DOWN  &kp LA(LEFT)     &trans                             &kp LA(RIGHT_ARROW)  &kp K_SCROLL_DOWN    &trans  &trans              &trans              &trans         &trans  &trans
-                                               &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp LG(MINUS)        &kp LG(PLUS)         &trans  &trans              &trans
+&kp LG(GRAVE)  &trans         &kp LS(LC(TAB))  &kp UP_ARROW                       &kp LC(TAB)          &trans               &trans       &trans              &kp LG(UP_ARROW)    &trans         &trans  &trans
+&trans         &kp PG_UP      &kp LEFT_ARROW   &kp DOWN_ARROW                     &kp RIGHT_ARROW      &kp K_SCROLL_UP      &trans       &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT)  &trans  &trans
+&trans         &kp PAGE_DOWN  &kp LA(LEFT)     &trans                             &kp LA(RIGHT_ARROW)  &kp K_SCROLL_DOWN    &trans       &trans              &trans              &trans         &trans  &trans
+                                               &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp LG(MINUS)        &kp LG(PLUS)         &bootloader  &sys_reset          &trans
             >;
         };
 
